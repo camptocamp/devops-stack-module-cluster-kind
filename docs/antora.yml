@@ -1,0 +1,7 @@
+---
+name: "kind"
+title: "KinD"
+version: true
+start_page: README.adoc
+nav:
+  - "modules/ROOT/nav.adoc"
