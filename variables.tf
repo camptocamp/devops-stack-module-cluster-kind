@@ -15,3 +15,9 @@ variable "kubernetes_version" {
   type        = string
   default     = "v1.25.3" # Define here the latest version of Kubernetes.
 }
+
+variable "extra_port_mappings" {
+  description = "Map of extra ports to open on the control-plane node."
+  type        = list(string)
+  default     = ["tcp/80", "tcp/443"]
+}
