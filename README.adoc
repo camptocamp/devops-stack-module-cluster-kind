@@ -1,5 +1,76 @@
 = KinD Terraform Module
 
-The `kind/kind` Terraform module provides a way to install and configure:
+A https://devops-stack.io[DevOps Stack] module to deploy a KinD cluster based on Docker.
 
-* A KinD cluster based on Docker
+This cluster module is mainly used to deploy a *single-node* Kubernetes cluster used for testing and development as well as for onboarding new users of the DevOps Stack.
+
+Because KinD is nothing more than a Kubernetes cluster running inside a container, it is required that you have Docker up and running on your machine (check their documentation https://docs.docker.com/engine/install/[here]).
+
+== Usage
+
+This module can be declared by adding the following block on your Terraform configuration:
+
+[source,terraform]
+----
+module "kind" {
+  source = "git::https://github.com/camptocamp/devops-stack-module-kind.git?ref=<RELEASE>"
+
+  cluster_name = local.cluster_name
+}
+----
+
+You can configure the version of Kubernetes by passing the variable `kubernetes_version`. This variable is nothing more than the tag of the image that is to be deployed. You can see the usable versions in https://hub.docker.com/r/kindest/node/tags[Docker Hub]. 
+
+[source,terraform]
+----
+module "kind" {
+  source = "git::https://github.com/camptocamp/devops-stack-module-kind.git?ref=<RELEASE>"
+
+  cluster_name = local.cluster_name
+
+  kubernetes_version = "1.25.3"
+}
+----
+
+It is also possible to configure the ports that are mapped between the KinD container and your machine. This is needed in order to access services that you deploy inside the cluster. By default, this module already maps the ports needed for HTTP and HTTPS traffic.
+
+[source,terraform]
+----
+module "kind" {
+  source = "git::https://github.com/camptocamp/devops-stack-module-kind.git?ref=<RELEASE>"
+
+  cluster_name = local.cluster_name
+
+  extra_port_mappings = ["tcp/22", "udp/53"]
+}
+----
+
+// This link does not have a working example before we have merged the v1 branch to master.
+TIP: A test deployment of the DevOps Stack is available https://github.com/camptocamp/devops-stack/tree/master/tests/kind-kind[here].
+
+== Technical Reference
+
+=== Dependencies
+
+Obviously, since this module deploys the cluster, it does not depend on any other module of the DevOps Stack. The only thing you'll probably want to configure are some `locals` with some common variables used on all the modules:
+
+[source,terraform]
+----
+locals {
+  cluster_name     = "gh-v1-cluster"
+  cluster_issuer   = "ca-issuer"
+  argocd_namespace = "argocd"
+}
+----
+
+// BEGIN_TF_DOCS
+// END_TF_DOCS
+
+=== Reference in table format 
+
+.Show tables
+[%collapsible]
+====
+// BEGIN_TF_TABLES
+// END_TF_TABLES
+====
