@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v1.0.0...v1.0.1) (2022-12-09)
+
+
+### Documentation
+
+* rewording and new repo name ([#5](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/5)) ([78f2ba1](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/78f2ba1f5b01bd2527cfb6bc4f8b590df6fc36f4))
+
 ## 1.0.0 (2022-12-06)
 
 
