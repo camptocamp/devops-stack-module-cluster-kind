@@ -1,10 +1,10 @@
-= KinD Terraform Module
+= devops-stack-module-cluster-kind
 
 A https://devops-stack.io[DevOps Stack] module to deploy a KinD cluster based on Docker.
 
 This cluster module is mainly used to deploy a *single-node* Kubernetes cluster used for testing and development as well as for onboarding new users of the DevOps Stack.
 
-Because KinD is nothing more than a Kubernetes cluster running inside a container, it is required that you have Docker up and running on your machine (check their documentation https://docs.docker.com/engine/install/[here]).
+Because KinD is nothing more than a Kubernetes cluster running inside a container, it is required that you have Docker up and running on your machine (the documentation to install Docker is available here https://docs.docker.com/engine/install/[here]).
 
 == Usage
 
