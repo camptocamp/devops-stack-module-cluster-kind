@@ -89,7 +89,7 @@ No modules.
 The following resources are used by this module:
 
 - https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster[kind_cluster.cluster] (resource)
-- https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind_network] (data source)
+- https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind] (data source)
 
 === Required Inputs
 
@@ -98,40 +98,17 @@ No required inputs.
 
 The following input variables are optional (have default values):
 
-==== [[input_base_domain]] <<input_base_domain,base_domain>>
-
-Description: The base domain used for ingresses.
-
-Type: `string`
-
-Default: `null`
-
 ==== [[input_cluster_name]] <<input_cluster_name,cluster_name>>
 
-Description: The name to give to the cluster.
+Description: n/a
 
 Type: `string`
 
 Default: `"kind"`
 
-==== [[input_extra_port_mappings]] <<input_extra_port_mappings,extra_port_mappings>>
-
-Description: Map of extra ports to open on the control-plane node.
-
-Type: `list(string)`
-
-Default:
-[source,json]
-----
-[
-  "tcp/80",
-  "tcp/443"
-]
-----
-
 ==== [[input_kubernetes_version]] <<input_kubernetes_version,kubernetes_version>>
 
-Description: Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
+Description: n/a
 
 Type: `string`
 
@@ -141,33 +118,17 @@ Default: `"v1.25.3"`
 
 The following outputs are exported:
 
-==== [[output_base_domain]] <<output_base_domain,base_domain>>
+==== [[output_kind_subnet]] <<output_kind_subnet,kind_subnet>>
 
-Description: The base domain used for ingresses. By default it generated using the IP of the Docker network and a *.nip.io domain.
+Description: Kind IPv4 docker network subnet.
 
-==== [[output_cluster_name]] <<output_cluster_name,cluster_name>>
+==== [[output_parsed_kubeconfig]] <<output_parsed_kubeconfig,parsed_kubeconfig>>
 
-Description: The name to given to the cluster.
+Description: Kubeconfig blocks to configure Terraform providers.
 
-==== [[output_kubernetes_client_certificate]] <<output_kubernetes_client_certificate,kubernetes_client_certificate>>
+==== [[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>>
 
-Description: Client certificate of the KinD cluster.
-
-==== [[output_kubernetes_client_key]] <<output_kubernetes_client_key,kubernetes_client_key>>
-
-Description: Key certificate of the KinD cluster.
-
-==== [[output_kubernetes_cluster_ca_certificate]] <<output_kubernetes_cluster_ca_certificate,kubernetes_cluster_ca_certificate>>
-
-Description: Certificate Authority of the KinD cluster.
-
-==== [[output_kubernetes_host]] <<output_kubernetes_host,kubernetes_host>>
-
-Description: Host for the endpoint of the KinD cluster.
-
-==== [[output_kubernetes_kubeconfig]] <<output_kubernetes_kubeconfig,kubernetes_kubeconfig>>
-
-Description: Configuration that can be copied into `.kube/config in order to access the cluster with `kubectl`.
+Description: Raw kubeconfig file for kubectl access.
 // END_TF_DOCS
 
 === Reference in table format 
@@ -200,7 +161,7 @@ Description: Configuration that can be copied into `.kube/config in order to acc
 |===
 |Name |Type
 |https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster[kind_cluster.cluster] |resource
-|https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind_network] |data source
+|https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind] |data source
 |===
 
 = Inputs
@@ -208,35 +169,14 @@ Description: Configuration that can be copied into `.kube/config in order to acc
 [cols="a,a,a,a,a",options="header,autowidth"]
 |===
 |Name |Description |Type |Default |Required
-|[[input_base_domain]] <<input_base_domain,base_domain>>
-|The base domain used for ingresses.
-|`string`
-|`null`
-|no
-
 |[[input_cluster_name]] <<input_cluster_name,cluster_name>>
-|The name to give to the cluster.
+|n/a
 |`string`
 |`"kind"`
 |no
 
-|[[input_extra_port_mappings]] <<input_extra_port_mappings,extra_port_mappings>>
-|Map of extra ports to open on the control-plane node.
-|`list(string)`
-|
-
-[source]
-----
-[
-  "tcp/80",
-  "tcp/443"
-]
-----
-
-|no
-
 |[[input_kubernetes_version]] <<input_kubernetes_version,kubernetes_version>>
-|Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
+|n/a
 |`string`
 |`"v1.25.3"`
 |no
@@ -248,13 +188,9 @@ Description: Configuration that can be copied into `.kube/config in order to acc
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Description
-|[[output_base_domain]] <<output_base_domain,base_domain>> |The base domain used for ingresses. By default it generated using the IP of the Docker network and a *.nip.io domain.
-|[[output_cluster_name]] <<output_cluster_name,cluster_name>> |The name to given to the cluster.
-|[[output_kubernetes_client_certificate]] <<output_kubernetes_client_certificate,kubernetes_client_certificate>> |Client certificate of the KinD cluster.
-|[[output_kubernetes_client_key]] <<output_kubernetes_client_key,kubernetes_client_key>> |Key certificate of the KinD cluster.
-|[[output_kubernetes_cluster_ca_certificate]] <<output_kubernetes_cluster_ca_certificate,kubernetes_cluster_ca_certificate>> |Certificate Authority of the KinD cluster.
-|[[output_kubernetes_host]] <<output_kubernetes_host,kubernetes_host>> |Host for the endpoint of the KinD cluster.
-|[[output_kubernetes_kubeconfig]] <<output_kubernetes_kubeconfig,kubernetes_kubeconfig>> |Configuration that can be copied into `.kube/config in order to access the cluster with `kubectl`.`
+|[[output_kind_subnet]] <<output_kind_subnet,kind_subnet>> |Kind IPv4 docker network subnet.
+|[[output_parsed_kubeconfig]] <<output_parsed_kubeconfig,parsed_kubeconfig>> |Kubeconfig blocks to configure Terraform providers.
+|[[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>> |Raw kubeconfig file for kubectl access.
 |===
 // END_TF_TABLES
 ====
