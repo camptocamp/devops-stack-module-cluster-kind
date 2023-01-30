@@ -10,12 +10,12 @@ output "parsed_kubeconfig" {
 }
 
 output "raw_kubeconfig" {
-  description = "Raw kubeconfig file for kubectl access."
+  description = "Raw `.kube/config` file for `kubectl` access."
   value       = kind_cluster.cluster.kubeconfig
   sensitive   = true
 }
 
 output "kind_subnet" {
-  description = "Kind IPv4 docker network subnet."
+  description = "Kind IPv4 Docker network subnet."
   value       = tolist(data.docker_network.kind.ipam_config[*].subnet).1
 }
