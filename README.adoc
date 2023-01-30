@@ -100,7 +100,7 @@ The following input variables are optional (have default values):
 
 ==== [[input_cluster_name]] <<input_cluster_name,cluster_name>>
 
-Description: n/a
+Description: The name to give to the cluster.
 
 Type: `string`
 
@@ -108,7 +108,7 @@ Default: `"kind"`
 
 ==== [[input_kubernetes_version]] <<input_kubernetes_version,kubernetes_version>>
 
-Description: n/a
+Description: Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
 
 Type: `string`
 
@@ -120,7 +120,7 @@ The following outputs are exported:
 
 ==== [[output_kind_subnet]] <<output_kind_subnet,kind_subnet>>
 
-Description: Kind IPv4 docker network subnet.
+Description: Kind IPv4 Docker network subnet.
 
 ==== [[output_parsed_kubeconfig]] <<output_parsed_kubeconfig,parsed_kubeconfig>>
 
@@ -128,7 +128,7 @@ Description: Kubeconfig blocks to configure Terraform providers.
 
 ==== [[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>>
 
-Description: Raw kubeconfig file for kubectl access.
+Description: Raw `.kube/config` file for `kubectl` access.
 // END_TF_DOCS
 
 === Reference in table format 
@@ -170,13 +170,13 @@ Description: Raw kubeconfig file for kubectl access.
 |===
 |Name |Description |Type |Default |Required
 |[[input_cluster_name]] <<input_cluster_name,cluster_name>>
-|n/a
+|The name to give to the cluster.
 |`string`
 |`"kind"`
 |no
 
 |[[input_kubernetes_version]] <<input_kubernetes_version,kubernetes_version>>
-|n/a
+|Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
 |`string`
 |`"v1.25.3"`
 |no
@@ -188,9 +188,9 @@ Description: Raw kubeconfig file for kubectl access.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Description
-|[[output_kind_subnet]] <<output_kind_subnet,kind_subnet>> |Kind IPv4 docker network subnet.
+|[[output_kind_subnet]] <<output_kind_subnet,kind_subnet>> |Kind IPv4 Docker network subnet.
 |[[output_parsed_kubeconfig]] <<output_parsed_kubeconfig,parsed_kubeconfig>> |Kubeconfig blocks to configure Terraform providers.
-|[[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>> |Raw kubeconfig file for kubectl access.
+|[[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>> |Raw `.kube/config` file for `kubectl` access.
 |===
 // END_TF_TABLES
 ====
