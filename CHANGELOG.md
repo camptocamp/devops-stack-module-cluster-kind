@@ -1,5 +1,16 @@
 # Changelog
 
+## [2.0.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v1.0.1...v2.0.0) (2023-01-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* change module config ([#7](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/7))
+
+### Code Refactoring
+
+* change module config ([#7](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/7)) ([4be5181](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/4be518131befab8c128a6d8f5f16c91160aa5f0b))
+
 ## [1.0.1](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v1.0.0...v1.0.1) (2022-12-09)
 
 
