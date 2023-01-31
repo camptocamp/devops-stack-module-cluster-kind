@@ -1,5 +1,5 @@
 variable "cluster_name" {
-  description = "The name to give to the cluster."  
+  description = "The name to give to the cluster."
   type        = string
   default     = "kind"
 }
