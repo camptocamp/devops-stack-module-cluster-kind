@@ -17,5 +17,6 @@ output "raw_kubeconfig" {
 
 output "kind_subnet" {
   description = "Kind IPv4 Docker network subnet."
-  value       = tolist(data.docker_network.kind.ipam_config[*].subnet).1
+  value       = compact([for x in tolist(data.docker_network.kind.ipam_config[*].subnet) : can(regex("::", x)) ? "" : x]).0
+  # The way we filter out IPv6 subnets is based on this -> https://discuss.hashicorp.com/t/how-to-filter-out-ip4-and-ip6-subnets/22556/5
 }
