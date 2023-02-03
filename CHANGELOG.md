@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.0.0...v2.1.0) (2023-02-03)
+
+
+### Features
+
+* dynamic worker nodes configuration ([#9](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/9)) ([b0f0d9d](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/b0f0d9d3f398b35559e2a7c089c7b9f9afc94fe8))
+
 ## [2.0.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v1.0.1...v2.0.0) (2023-01-31)
 
 
