@@ -9,3 +9,16 @@ variable "kubernetes_version" {
   type        = string
   default     = "v1.26.0"
 }
+
+variable "nodes" {
+  description = "List of nodes"
+  type        = list(map(string))
+  default = [
+    {
+      "platform" = "devops-stack"
+    },
+    {
+      "platform" = "devops-stack"
+    }
+  ]
+}
