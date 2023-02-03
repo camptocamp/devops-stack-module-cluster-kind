@@ -10,12 +10,13 @@ resource "kind_cluster" "cluster" {
     node {
       role = "control-plane"
     }
-    # TODO variable for worker nodes with labels.
-    node {
-      role = "worker"
-    }
-    node {
-      role = "worker"
+
+    dynamic "node" {
+      for_each = var.nodes
+      content {
+        role   = "worker"
+        labels = node.value
+      }
     }
   }
 }
