@@ -114,6 +114,25 @@ Type: `string`
 
 Default: `"v1.26.0"`
 
+==== [[input_nodes]] <<input_nodes,nodes>>
+
+Description: List of nodes
+
+Type: `list(map(string))`
+
+Default:
+[source,json]
+----
+[
+  {
+    "platform": "devops-stack"
+  },
+  {
+    "platform": "devops-stack"
+  }
+]
+----
+
 === Outputs
 
 The following outputs are exported:
@@ -179,6 +198,25 @@ Description: Raw `.kube/config` file for `kubectl` access.
 |Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
 |`string`
 |`"v1.26.0"`
+|no
+
+|[[input_nodes]] <<input_nodes,nodes>>
+|List of nodes
+|`list(map(string))`
+|
+
+[source]
+----
+[
+  {
+    "platform": "devops-stack"
+  },
+  {
+    "platform": "devops-stack"
+  }
+]
+----
+
 |no
 
 |===
