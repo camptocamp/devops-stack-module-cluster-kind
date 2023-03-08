@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.1](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.1.0...v2.1.1) (2023-03-08)
+
+
+### Bug Fixes
+
+* change to looser versions constraints as per best practices ([#11](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/11)) ([540fc10](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/540fc10ea45b6eacab5bea42b165b6ec3f16ce11))
+
 ## [2.1.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.0.0...v2.1.0) (2023-02-03)
 
 
