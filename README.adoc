@@ -68,17 +68,17 @@ locals {
 
 The following requirements are needed by this module:
 
-- [[requirement_docker]] <<requirement_docker,docker>> (~> 2.23.1)
+- [[requirement_docker]] <<requirement_docker,docker>> (>= 2.23.1)
 
-- [[requirement_kind]] <<requirement_kind,kind>> (~> 0.0.16)
+- [[requirement_kind]] <<requirement_kind,kind>> (>= 0.0.16)
 
 === Providers
 
 The following providers are used by this module:
 
-- [[provider_docker]] <<provider_docker,docker>> (~> 2.23.1)
+- [[provider_docker]] <<provider_docker,docker>> (>= 2.23.1)
 
-- [[provider_kind]] <<provider_kind,kind>> (~> 0.0.16)
+- [[provider_kind]] <<provider_kind,kind>> (>= 0.0.16)
 
 === Modules
 
@@ -161,8 +161,8 @@ Description: Raw `.kube/config` file for `kubectl` access.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[requirement_docker]] <<requirement_docker,docker>> |~> 2.23.1
-|[[requirement_kind]] <<requirement_kind,kind>> |~> 0.0.16
+|[[requirement_docker]] <<requirement_docker,docker>> |>= 2.23.1
+|[[requirement_kind]] <<requirement_kind,kind>> |>= 0.0.16
 |===
 
 = Providers
@@ -170,8 +170,8 @@ Description: Raw `.kube/config` file for `kubectl` access.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[provider_docker]] <<provider_docker,docker>> |~> 2.23.1
-|[[provider_kind]] <<provider_kind,kind>> |~> 0.0.16
+|[[provider_docker]] <<provider_docker,docker>> |>= 2.23.1
+|[[provider_kind]] <<provider_kind,kind>> |>= 0.0.16
 |===
 
 = Resources
