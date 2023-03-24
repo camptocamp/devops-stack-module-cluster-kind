@@ -80,10 +80,6 @@ The following providers are used by this module:
 
 - [[provider_kind]] <<provider_kind,kind>> (>= 0.0.16)
 
-=== Modules
-
-No modules.
-
 === Resources
 
 The following resources are used by this module:
@@ -91,9 +87,6 @@ The following resources are used by this module:
 - https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster[kind_cluster.cluster] (resource)
 - https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind] (data source)
 
-=== Required Inputs
-
-No required inputs.
 === Optional Inputs
 
 The following input variables are optional (have default values):
