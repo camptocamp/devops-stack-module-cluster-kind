@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.1.2](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.1.1...v2.1.2) (2023-03-24)
+
+
+### Documentation
+
+* add PR template and change module title ([#14](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/14)) ([f0d49c3](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/f0d49c3e68b86b0838118e756f33b0619cf3d7e0))
+
 ## [2.1.1](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.1.0...v2.1.1) (2023-03-08)
 
 
