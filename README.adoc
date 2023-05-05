@@ -122,6 +122,9 @@ Default:
   },
   {
     "platform": "devops-stack"
+  },
+  {
+    "platform": "devops-stack"
   }
 ]
 ----
@@ -201,6 +204,9 @@ Description: Kind IPv4 Docker network subnet.
 [source]
 ----
 [
+  {
+    "platform": "devops-stack"
+  },
   {
     "platform": "devops-stack"
   },

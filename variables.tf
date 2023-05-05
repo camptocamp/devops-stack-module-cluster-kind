@@ -19,6 +19,9 @@ variable "nodes" {
     },
     {
       "platform" = "devops-stack"
+    },
+    {
+      "platform" = "devops-stack"
     }
   ]
 }
