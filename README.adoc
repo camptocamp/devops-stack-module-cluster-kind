@@ -76,9 +76,9 @@ The following requirements are needed by this module:
 
 The following providers are used by this module:
 
-- [[provider_docker]] <<provider_docker,docker>> (>= 2.23.1)
-
 - [[provider_kind]] <<provider_kind,kind>> (>= 0.0.16)
+
+- [[provider_docker]] <<provider_docker,docker>> (>= 2.23.1)
 
 === Resources
 
@@ -122,6 +122,9 @@ Default:
   },
   {
     "platform": "devops-stack"
+  },
+  {
+    "platform": "devops-stack"
   }
 ]
 ----
@@ -130,10 +133,6 @@ Default:
 
 The following outputs are exported:
 
-==== [[output_kind_subnet]] <<output_kind_subnet,kind_subnet>>
-
-Description: Kind IPv4 Docker network subnet.
-
 ==== [[output_parsed_kubeconfig]] <<output_parsed_kubeconfig,parsed_kubeconfig>>
 
 Description: Kubeconfig blocks to configure Terraform providers.
@@ -141,6 +140,10 @@ Description: Kubeconfig blocks to configure Terraform providers.
 ==== [[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>>
 
 Description: Raw `.kube/config` file for `kubectl` access.
+
+==== [[output_kind_subnet]] <<output_kind_subnet,kind_subnet>>
+
+Description: Kind IPv4 Docker network subnet.
 // END_TF_DOCS
 
 === Reference in table format 
@@ -163,8 +166,8 @@ Description: Raw `.kube/config` file for `kubectl` access.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[provider_docker]] <<provider_docker,docker>> |>= 2.23.1
 |[[provider_kind]] <<provider_kind,kind>> |>= 0.0.16
+|[[provider_docker]] <<provider_docker,docker>> |>= 2.23.1
 |===
 
 = Resources
@@ -206,6 +209,9 @@ Description: Raw `.kube/config` file for `kubectl` access.
   },
   {
     "platform": "devops-stack"
+  },
+  {
+    "platform": "devops-stack"
   }
 ]
 ----
@@ -219,9 +225,9 @@ Description: Raw `.kube/config` file for `kubectl` access.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Description
-|[[output_kind_subnet]] <<output_kind_subnet,kind_subnet>> |Kind IPv4 Docker network subnet.
 |[[output_parsed_kubeconfig]] <<output_parsed_kubeconfig,parsed_kubeconfig>> |Kubeconfig blocks to configure Terraform providers.
 |[[output_raw_kubeconfig]] <<output_raw_kubeconfig,raw_kubeconfig>> |Raw `.kube/config` file for `kubectl` access.
+|[[output_kind_subnet]] <<output_kind_subnet,kind_subnet>> |Kind IPv4 Docker network subnet.
 |===
 // END_TF_TABLES
 ====
