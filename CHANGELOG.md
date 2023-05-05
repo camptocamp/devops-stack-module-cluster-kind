@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.1.2...v2.2.0) (2023-05-05)
+
+
+### Features
+
+* Deploy 3 nodes by default ([#17](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/17)) ([963b4e3](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/963b4e37684edaa23713587b7cf427961570b64d))
+
 ## [2.1.2](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.1.1...v2.1.2) (2023-03-24)
 
 
