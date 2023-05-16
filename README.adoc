@@ -70,13 +70,13 @@ The following requirements are needed by this module:
 
 - [[requirement_docker]] <<requirement_docker,docker>> (>= 2.23.1)
 
-- [[requirement_kind]] <<requirement_kind,kind>> (>= 0.0.16)
+- [[requirement_kind]] <<requirement_kind,kind>> (0.0.17)
 
 === Providers
 
 The following providers are used by this module:
 
-- [[provider_kind]] <<provider_kind,kind>> (>= 0.0.16)
+- [[provider_kind]] <<provider_kind,kind>> (0.0.17)
 
 - [[provider_docker]] <<provider_docker,docker>> (>= 2.23.1)
 
@@ -84,7 +84,7 @@ The following providers are used by this module:
 
 The following resources are used by this module:
 
-- https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster[kind_cluster.cluster] (resource)
+- https://registry.terraform.io/providers/tehcyx/kind/0.0.17/docs/resources/cluster[kind_cluster.cluster] (resource)
 - https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind] (data source)
 
 === Optional Inputs
@@ -158,7 +158,7 @@ Description: Kind IPv4 Docker network subnet.
 |===
 |Name |Version
 |[[requirement_docker]] <<requirement_docker,docker>> |>= 2.23.1
-|[[requirement_kind]] <<requirement_kind,kind>> |>= 0.0.16
+|[[requirement_kind]] <<requirement_kind,kind>> |0.0.17
 |===
 
 = Providers
@@ -166,7 +166,7 @@ Description: Kind IPv4 Docker network subnet.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Version
-|[[provider_kind]] <<provider_kind,kind>> |>= 0.0.16
+|[[provider_kind]] <<provider_kind,kind>> |0.0.17
 |[[provider_docker]] <<provider_docker,docker>> |>= 2.23.1
 |===
 
@@ -175,7 +175,7 @@ Description: Kind IPv4 Docker network subnet.
 [cols="a,a",options="header,autowidth"]
 |===
 |Name |Type
-|https://registry.terraform.io/providers/tehcyx/kind/latest/docs/resources/cluster[kind_cluster.cluster] |resource
+|https://registry.terraform.io/providers/tehcyx/kind/0.0.17/docs/resources/cluster[kind_cluster.cluster] |resource
 |https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/data-sources/network[docker_network.kind] |data source
 |===
 
