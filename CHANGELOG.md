@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.2.2](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.2.1...v2.2.2) (2023-05-22)
+
+
+### Bug Fixes
+
+* set KinD provider version to 0.1.0 and onwards ([#21](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/21)) ([7510c8c](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/7510c8c9b552278ed707f1f3d8029e48470270e8))
+
 ## [2.2.1](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.2.0...v2.2.1) (2023-05-16)
 
 
