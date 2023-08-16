@@ -7,7 +7,7 @@ variable "cluster_name" {
 variable "kubernetes_version" {
   description = "Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here])."
   type        = string
-  default     = "v1.26.0"
+  default     = "v1.27.3"
 }
 
 variable "nodes" {
