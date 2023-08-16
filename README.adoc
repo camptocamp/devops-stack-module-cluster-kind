@@ -2,9 +2,11 @@
 
 A https://devops-stack.io[DevOps Stack] module to deploy a KinD cluster based on Docker.
 
-This cluster module is mainly used to deploy a *single-node* Kubernetes cluster used for testing and development as well as for onboarding new users of the DevOps Stack.
+This cluster module is mainly used to deploy a Kubernetes cluster used for testing and development as well as for onboarding new users of the DevOps Stack.
 
-Because KinD is nothing more than a Kubernetes cluster running inside a container, it is required that you have Docker up and running on your machine (the documentation to install Docker is available here https://docs.docker.com/engine/install/[here]).
+KinD is nothing more than a local Kubernetes cluster using Docker container "nodes". As such, it is required that you have Docker up and running on your machine (the documentation to install Docker is available here https://docs.docker.com/engine/install/[here]).
+
+TIP: An example of a deployment of the DevOps Stack using KinD is available https://github.com/camptocamp/devops-stack/tree/main/examples/kind[here] as well as an accompanying xref:ROOT:tutorials/deploy_aks.adoc[quick tutorial].
 
 == Usage
 
@@ -28,11 +30,11 @@ module "kind" {
 
   cluster_name = local.cluster_name
 
-  kubernetes_version = "1.25.3"
+  kubernetes_version = "1.27.3"
 }
 ----
 
-It is also possible to configure the ports that are mapped between the KinD container and your machine. This is needed in order to access services that you deploy inside the cluster. By default, this module already maps the ports needed for HTTP and HTTPS traffic.
+By default, this module deploys a cluster with a control plane node and 3 worker nodes. If you want to deploy one more worker node, you can do it like this:
 
 [source,terraform]
 ----
@@ -41,12 +43,22 @@ module "kind" {
 
   cluster_name = local.cluster_name
 
-  extra_port_mappings = ["tcp/22", "udp/53"]
+  nodes = [
+    {
+      "platform" = "devops-stack"
+    },
+    {
+      "platform" = "devops-stack"
+    },
+    {
+      "platform" = "devops-stack"
+    },
+    {
+      "platform" = "devops-stack"
+    },
+  ]
 }
 ----
-
-// This link does not have a working example before we have merged the v1 branch to master.
-TIP: A test deployment of the DevOps Stack is available https://github.com/camptocamp/devops-stack/tree/master/tests/kind-kind[here].
 
 == Technical Reference
 
@@ -57,9 +69,10 @@ Obviously, since this module deploys the cluster, it does not depend on any othe
 [source,terraform]
 ----
 locals {
-  cluster_name     = "gh-v1-cluster"
-  cluster_issuer   = "ca-issuer"
-  argocd_namespace = "argocd"
+  kubernetes_version     = "v1.27.3"
+  cluster_name           = "YOUR_CLUSTER_NAME"
+  base_domain            = format("%s.nip.io", replace(module.traefik.external_ip, ".", "-"))
+  cluster_issuer         = "ca-issuer"
 }
 ----
 
