@@ -22,6 +22,11 @@ variable "nodes" {
     },
     {
       "platform" = "devops-stack"
-    }
+    },
   ]
+
+  validation {
+    condition     = length(var.nodes) >= 3
+    error_message = "A minimum of 3 nodes is required because of the way the other DevOps Stack modules are configured."
+  }
 }
