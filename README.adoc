@@ -118,11 +118,11 @@ Description: Kubernetes version to use for the KinD cluster (images available ht
 
 Type: `string`
 
-Default: `"v1.26.0"`
+Default: `"v1.27.3"`
 
 ==== [[input_nodes]] <<input_nodes,nodes>>
 
-Description: List of nodes
+Description: List of worker nodes to create in the KinD cluster. To increase the number of nodes, simply duplicate the objects on the list.
 
 Type: `list(map(string))`
 
@@ -206,11 +206,11 @@ Description: Kind IPv4 Docker network subnet.
 |[[input_kubernetes_version]] <<input_kubernetes_version,kubernetes_version>>
 |Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
 |`string`
-|`"v1.26.0"`
+|`"v1.27.3"`
 |no
 
 |[[input_nodes]] <<input_nodes,nodes>>
-|List of nodes
+|List of worker nodes to create in the KinD cluster. To increase the number of nodes, simply duplicate the objects on the list.
 |`list(map(string))`
 |
 
