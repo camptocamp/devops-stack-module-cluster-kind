@@ -11,7 +11,7 @@ variable "kubernetes_version" {
 }
 
 variable "nodes" {
-  description = "List of nodes"
+  description = "List of worker nodes to create in the KinD cluster. To increase the number of nodes, simply duplicate the objects on the list."
   type        = list(map(string))
   default = [
     {
