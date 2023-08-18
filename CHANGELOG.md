@@ -1,5 +1,17 @@
 # Changelog
 
+## [2.3.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.2.2...v2.3.0) (2023-08-18)
+
+
+### Features
+
+* update default Kubernetes version ([d3dd9be](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/d3dd9be675422de5859058c2315a82cb73666ece))
+
+
+### Bug Fixes
+
+* add validation to the nodes variable ([a0a0398](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/a0a0398f24d0cf67fcc4d7694e6acd8bbee3f89f))
+
 ## [2.2.2](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.2.1...v2.2.2) (2023-05-22)
 
 
