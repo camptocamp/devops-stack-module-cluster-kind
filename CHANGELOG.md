@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.4.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.3.0...v2.4.0) (2024-01-18)
+
+
+### Features
+
+* update the default Kubernetes version ([#25](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/25)) ([d62af9b](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/d62af9bfd347b07a1796e92c67df685a085d1cf5))
+
 ## [2.3.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.2.2...v2.3.0) (2023-08-18)
 
 
