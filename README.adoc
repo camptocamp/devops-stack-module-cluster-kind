@@ -30,7 +30,7 @@ module "kind" {
 
   cluster_name = local.cluster_name
 
-  kubernetes_version = "1.29.0"
+  kubernetes_version = "1.29.1"
 }
 ----
 
