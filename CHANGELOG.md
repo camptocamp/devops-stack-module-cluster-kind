@@ -1,5 +1,12 @@
 # Changelog
 
+## [2.5.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.4.0...v2.5.0) (2024-02-23)
+
+
+### Features
+
+* fix broken link and update K8s version ([#27](https://github.com/camptocamp/devops-stack-module-cluster-kind/issues/27)) ([e9c3942](https://github.com/camptocamp/devops-stack-module-cluster-kind/commit/e9c3942414fd960b1c830bdbc3fb7a1997b567a3))
+
 ## [2.4.0](https://github.com/camptocamp/devops-stack-module-cluster-kind/compare/v2.3.0...v2.4.0) (2024-01-18)
 
 
