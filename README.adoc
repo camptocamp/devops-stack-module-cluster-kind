@@ -6,7 +6,7 @@ This cluster module is mainly used to deploy a Kubernetes cluster used for testi
 
 KinD is nothing more than a local Kubernetes cluster using Docker container "nodes". As such, it is required that you have Docker up and running on your machine (the documentation to install Docker is available here https://docs.docker.com/engine/install/[here]).
 
-TIP: An example of a deployment of the DevOps Stack using KinD is available https://github.com/camptocamp/devops-stack/tree/main/examples/kind[here] as well as an accompanying xref:ROOT:tutorials/deploy_aks.adoc[quick tutorial].
+TIP: An example of a deployment of the DevOps Stack using KinD is available https://github.com/camptocamp/devops-stack/tree/main/examples/kind[here] as well as an accompanying xref:ROOT:tutorials/deploy_kind.adoc[quick tutorial].
 
 == Usage
 
@@ -30,7 +30,7 @@ module "kind" {
 
   cluster_name = local.cluster_name
 
-  kubernetes_version = "1.27.3"
+  kubernetes_version = "1.29.1"
 }
 ----
 
@@ -69,7 +69,7 @@ Obviously, since this module deploys the cluster, it does not depend on any othe
 [source,terraform]
 ----
 locals {
-  kubernetes_version     = "v1.27.3"
+  kubernetes_version     = "v1.29.0"
   cluster_name           = "YOUR_CLUSTER_NAME"
   base_domain            = format("%s.nip.io", replace(module.traefik.external_ip, ".", "-"))
   cluster_issuer         = "ca-issuer"
@@ -118,7 +118,7 @@ Description: Kubernetes version to use for the KinD cluster (images available ht
 
 Type: `string`
 
-Default: `"v1.29.0"`
+Default: `"v1.29.1"`
 
 ==== [[input_nodes]] <<input_nodes,nodes>>
 
@@ -206,7 +206,7 @@ Description: Kind IPv4 Docker network subnet.
 |[[input_kubernetes_version]] <<input_kubernetes_version,kubernetes_version>>
 |Kubernetes version to use for the KinD cluster (images available https://hub.docker.com/r/kindest/node/tags[here]).
 |`string`
-|`"v1.29.0"`
+|`"v1.29.1"`
 |no
 
 |[[input_nodes]] <<input_nodes,nodes>>
